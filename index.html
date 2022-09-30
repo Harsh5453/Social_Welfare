@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Social Welfare</title>
+
+</head>
+<link rel="stylesheet" href="style.css" />
+
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a  href="about.html">About</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img1.jpeg" style="width:90%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img2.jpeg" style="width:90%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img3.jpg" style="width:90% ">
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+  <div class="center">
+    <h1> Social Welfare Charity </h1>
+    <p> The aim of social welfare is to focus on all the issues concerning human rights, social, environmental and
+      advocacy. It work to promote and improve the social and political conditions of the society on a broad
+      scale. Some of the functios of Social welfare is to provide education and feed underprivileged people and
+      fulfill their daily need . It is a non-profitable charity .Millions of people give to charity on a regular
+      basis to support causes they believe in, as well as for the positive effect it has on their own lives. Let's
+      join hands in making specially-abled lives better. you can contribute in charity by giving some donation ,
+      It will be helpful to contribute to our nation future .
+    </p>
+    <div class="buttons">
+      <button class="btn" onclick="window.location.href = 'donate.html'"> Donate </button>
+    </div>
+  </div>
+
+  </div>
+  <div class="footer">
+    <footer>Copyright &copy; 2022 | Harsh </footer>
+  </div>
+
+
+</body>
+
+</html>
